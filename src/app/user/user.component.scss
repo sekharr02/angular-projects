@@ -1,0 +1,27 @@
+.card{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 25px;
+    font-size: 15px;
+    cursor: pointer;
+    
+}
+h5:hover{
+    color: rgb(128, 128, 196);
+    transition: 1s;
+}
+
+.space{
+    margin-left: 115px;
+}
+h2{
+    
+    text-decoration: underline;
+}
+.card:nth-child(even){
+    background-color: green;
+}
+.card:nth-child(odd){
+    background-color: rgb(213, 107, 107);
+    color: #fff;
+}

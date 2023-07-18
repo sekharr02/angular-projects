@@ -1,0 +1,30 @@
+
+<section>
+<form  [formGroup]="bankusers">
+    <label>Account name : </label>
+    <input type="text" formControlName="account_name">
+    <br>
+
+    <label>Account balance : </label>
+    <input type="text" formControlName="available_balance">
+    <br>
+
+    <label>Account number : </label>
+    <input type="text" formControlName="account_number">
+    <br>
+
+    <label>city : </label>
+    <input type="text" formControlName="city">
+    <br>
+
+    <label>Image : </label>
+    <input type="text" formControlName="profie_picture">
+    <br>
+
+    <label>id : </label>
+    <input type="text" formControlName="id">
+    <br>
+
+    <button class="btn btn-primary" (click)="check()">submit</button>
+</form>
+</section>

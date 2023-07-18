@@ -1,0 +1,14 @@
+
+    <div class="cardss" *ngFor="let gmail of gmails">
+        <div class="left1">
+        <img src="https://companieslogo.com/img/orig/IBN-af38b5c0.png?t=1648383607" alt="" height="50px" width="50px">
+    </div>
+    <div class="content" [ngStyle]="{color: gmail.completed==true?'black':'gray'}" >
+        <h2 >{{gmail.title}}</h2>
+        <h4>{{"User-id :"+gmail.userId}}</h4>
+        <h4>{{"ID : "+gmail.id}}</h4>
+    </div>
+   
+    </div>
+
+

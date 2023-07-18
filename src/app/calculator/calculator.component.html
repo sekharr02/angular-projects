@@ -1,0 +1,16 @@
+<p>calculator works!</p>
+
+<div class="container2">
+    <div class="calculator1">
+        <h1>Caluculator</h1>
+        <label for=""></label>
+        <input type="number" [(ngModel)]="num1" >
+        <br>
+        <input type="number" [(ngModel)]="num2">
+        <br>    
+        <button (click)="sum()">sum</button>
+        <button (click)="div()">div</button>
+        <button (click)="mul()">mul</button>
+        <h2>Result is : {{result}}</h2>
+    </div>
+</div>

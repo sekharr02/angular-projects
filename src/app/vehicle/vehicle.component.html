@@ -1,0 +1,70 @@
+<!-- <table class="table table-dark table-hover">
+    <thead>
+        <tr>
+            <th>Vehicle</th>
+            <th>manufacturer</th>
+            <th>model</th>
+            <th>type</th>
+            <th>fuel</th>
+            <th>color</th>
+            <th>image</th>
+            <th>id</th> 
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let vehicle of vehicles">
+            <td>{{vehicle.Vehicle}}</td>
+            <td>{{vehicle.manufacturer}}</td>
+            <td>{{vehicle.model}}</td>
+            <td>{{vehicle.type}}</td>
+            <td>{{vehicle.fuel}}</td>
+            <td>{{vehicle.color}}</td>
+            <td><img src="{{vehicle.image}}" alt="" height="100x" width="100px"></td>
+            <td>{{vehicle.id}}</td>
+        </tr>
+    </tbody>
+</table> -->
+<input type="text" [(ngModel)]='search' (keydown)="getFiltervehicles()">
+<label >column</label>
+<select [(ngModel)]="column">
+    <option>color</option>
+    <option>fuel</option>
+</select>
+
+<label >order</label>
+<select [(ngModel)]="order">
+    <option>asc</option>
+    <option >desc</option>
+</select>
+<br>
+<label >limit :</label>
+<select [(ngModel)]="stops">
+    <option>1-5</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+</select>
+
+<label >page</label>
+<select [(ngModel)]="page">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+</select>
+<button (click)="getpagination()">sort</button>
+<br>
+<div class="row container9"  *ngFor="let vehicle of vehicles">
+    <div class="col-lg-3 col-md-4 col-sm-6 col-12 cards">
+        <img src="{{vehicle.image}}" alt="" height="150px" width="100%">
+        <h5>{{'Vehicle : ' +vehicle.Vehicle}}</h5>
+        <h5>{{'Manufacturer : ' +vehicle.manufacturer}}</h5>
+        <h5>{{'Type : ' +vehicle.type}}</h5>
+        <h5>{{'Fuel : ' +vehicle.fuel}}</h5>
+        <h5>{{'Color : ' +vehicle.color}}</h5>
+        <h5>{{'Vehicle Id : ' +vehicle.id}}</h5>
+        <!-- <h5>{{vehicle.id}}</h5> -->
+        <button (click)="delete(vehicle.id)" class="btn btn-danger">delete</button>
+    </div>
+</div>

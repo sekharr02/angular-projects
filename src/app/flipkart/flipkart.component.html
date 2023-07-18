@@ -1,0 +1,13 @@
+<div class="container4">
+    <div class="cardsd" *ngFor="let flipkart of flipkarts" >
+        <img src="{{flipkart.image}}" alt="" height="150px" width="100%">
+        <h5>{{"Title : "+flipkart.title}}</h5>
+        <h5>{{"Catogery : "+flipkart.category}}</h5>
+        <!-- <p>{{"description : "+ flipkart.description}}</p> -->
+        <h5>{{"Price : "+flipkart.price+"$"}}</h5>
+        <h5>{{"Rating : " + flipkart.rating.rate+"⭐⭐⭐"}}</h5>
+        <h5>{{"count : " + flipkart.rating.count}}</h5>
+        <h5>{{"id : " +flipkart.id}}</h5>
+
+    </div>
+</div>

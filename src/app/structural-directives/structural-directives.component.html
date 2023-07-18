@@ -1,0 +1,65 @@
+<p>structural-directives works!</p>
+
+<p *ngFor="let name of names">{{name}}</p>
+<ol>
+    <li *ngFor="let name of names">{{name}}</li>
+</ol>
+
+<ul>
+    <li *ngFor="let name of names">{{name}}</li>
+</ul>
+
+<select name="" id="">
+    <option *ngFor="let state of states">{{state}}</option>
+</select>
+
+<h2 *ngFor="let product of products">{{product.name}} price is {{product.price}}</h2>
+
+<table border="">
+    <thead>
+        <tr>
+            <th>name</th>
+            <th>price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">
+            <td>{{product.name}}</td>
+            <td>{{product.price}}</td>
+        </tr>
+    </tbody>
+</table>
+<br>
+
+<table class="dark-table">
+    <thead>
+        <tr>
+            <th>name</th>
+            <th>phone</th>
+            <th>class</th>
+            <th>marks</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td>{{user.name}}</td>
+            <td>{{user.phone}}</td>
+            <td>{{user.class}}</td>
+            <td>{{user.marks}}</td>
+        </tr>
+    </tbody>
+</table>
+<h1 *ngIf="false">hello</h1>
+
+<label for="">number :</label>
+<input type="text" [(ngModel)] = "num">
+
+
+<h1 *ngIf="">empty</h1>
+<h1 *ngIf="num<0">this is negitive number</h1>
+<h1 *ngIf="num>0">this is positive number</h1>
+<h1 *ngIf="num==0">this is zero</h1>
+
+
+
+

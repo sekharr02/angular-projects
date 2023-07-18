@@ -1,0 +1,29 @@
+// form section
+label{
+    width: 120px;
+    margin-bottom: 25px;
+}
+
+form{
+    height: 500px;
+    width: 500px;
+    border: 1px solid rgb(164, 156, 156);
+    // text-align: center;
+    padding: 30px;
+    background-color: #fff;
+    
+}
+section{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+
+}
+h4{
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    color: rgb(140, 145, 211);
+}

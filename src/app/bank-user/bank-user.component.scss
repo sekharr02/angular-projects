@@ -1,0 +1,25 @@
+label{
+    width: 160px;
+    margin-bottom: 25px;
+    color: #fff;
+}
+
+
+form{
+    height: 500px;
+    width: 500px;
+    border: 1px solid rgb(88, 37, 37);
+    padding: 50px;
+    border-radius: 13px;
+    box-shadow: 15px 15px 25px #000;
+}
+section{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(119, 119, 218);
+}
+button{
+    margin-left: 150px;
+}
