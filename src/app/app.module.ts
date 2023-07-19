@@ -31,6 +31,7 @@ import { UserComponent } from './user/user.component';
 import { StudentComponent } from './student/student.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { BankUserComponent } from './bank-user/bank-user.component';
+import { CreateUserComponent } from './create-user/create-user.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import { BankUserComponent } from './bank-user/bank-user.component';
     UserComponent,
     StudentComponent,
     CreateVehicleComponent,
-    BankUserComponent
+    BankUserComponent,
+    CreateUserComponent
   ],
   imports: [
     BrowserModule,
