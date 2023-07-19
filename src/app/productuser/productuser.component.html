@@ -45,27 +45,23 @@
                 <button (click)="delete(i)">delete</button>
             </div>
         </div>
-    </div>
-    <label for="">Payment mode</label>
-    <input type="radio" name="type" formControlName="mode" >
+    </div><br>
+    <label for="">Payment-mode</label>
+    <input type="radio" name="type" formControlName="mode" value="upi" >
     <label for="">upi</label>
-    <input type="radio" name="type" formControlName="mode">
+    <input type="radio" name="type" formControlName="mode" value="netbanking">
     <label for="">netbanking</label>
 
+    <div *ngIf="productUser.get('mode')?.value=='upi'">
+        <label for="">upi</label>
+        <input type="text" formControlName="upi">
 
+    </div>
+    <div *ngIf="productUser.get('mode')?.value=='netbanking'">
+        <label for="">netbanking</label>
+        <input type="text" formControlName="netbanking">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+    </div>
+   <br>
     <button class="btn btn-info" (click)="submit()">submit</button>
 </form>
