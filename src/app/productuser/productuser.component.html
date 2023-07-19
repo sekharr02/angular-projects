@@ -1,0 +1,71 @@
+<!-- <p>productuser works!</p> -->
+
+<form action="" [formGroup]="productUser">
+    <label for="">Name :</label>
+    <input type="text" formControlName="name">
+    <br>
+
+    <label for="">price :</label>
+    <input type="text" formControlName="price">
+    <br>
+
+    <label for="">color :</label>
+    <input type="text" formControlName="color">
+    <br>
+
+    <div formGroupName="features">
+        <label for="">ram :</label>
+        <input type="text" formControlName="ram">
+        <br>
+
+        <label for="">battery :</label>
+        <input type="text" formControlName="battery">
+        <br>
+
+        <label for="">processor :</label>
+        <input type="text" formControlName="processor">
+        <br>
+    </div>
+
+     <button (click)="add()">+</button>
+    <div formArrayName="cards">
+        <div *ngFor="let card of cardArray.controls; let i= index">
+            <div formGroupName="{{i}}">
+                <label for="">name :</label>
+                <input type="text" formControlName="name">
+                <br>
+
+                <label for="">time :</label>
+                <input type="datetime" formControlName="time">
+                <br>
+
+                <label for="">message :</label>
+                <input type="text" formControlName="message">
+                <br>
+                <button (click)="delete(i)">delete</button>
+            </div>
+        </div>
+    </div>
+    <label for="">Payment mode</label>
+    <input type="radio" name="type" formControlName="mode" >
+    <label for="">upi</label>
+    <input type="radio" name="type" formControlName="mode">
+    <label for="">netbanking</label>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <button class="btn btn-info" (click)="submit()">submit</button>
+</form>
