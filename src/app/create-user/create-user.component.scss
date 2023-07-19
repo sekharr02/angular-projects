@@ -3,12 +3,36 @@ label{
     margin-bottom: 25px;
 }
 section{
-    height: 100vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
 
+}
+h3{
+    font-family:Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+}
+.btn-dark{
+    margin-bottom: 5px;
+}
+.btn-danger{
+    margin-top: 15px;
+}
+
+.btn-dark:hover{
+    border-radius: 50%;
+    transition: 1s;
+    margin-bottom: 15px;
+}
+.cards{
+    height: auto;
+    width: auto;
+    border: 1px solid #000;
+    border-radius: 20px;
+    padding: 15px;
+    margin-top:25px ;
 }
 
 
@@ -19,4 +43,5 @@ form{
     border-radius: 15px;
     padding: 35px;
     box-shadow:25px 25px 10px #000;
+    margin-top: 25px;
 }

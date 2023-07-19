@@ -47,6 +47,29 @@
             <label for="">hostel fee</label>
             <input type="number" formControlName="hostelFee">
         </div>
+        <button (click)="add()" class="btn btn-dark">+</button>
+
+
+        <div formArrayName="cards">
+            <div *ngFor="let card of formarray.controls; let i=index">
+                <div formGroupName="{{i}}" class="cards">
+                <h3>card {{i+1}}</h3>
+                <label for="">Number :</label>
+                <input type="number" formControlName="number">
+                <br>
+
+                <label for="">expiry Date :</label>
+                <input type="month" formControlName="expirydate">
+                <br>
+
+                <label for="">CVV :</label>
+                <input type="number" formControlName="cvv">
+                <br>
+
+                <button class="btn btn-danger" (click)="delete(i)">delete</button>
+                </div>
+            </div>
+        </div>
 
         <button (click)="submit()" class="btn btn-danger">submit</button>
 
