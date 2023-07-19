@@ -2,3 +2,45 @@ label{
     width: 100px;
     margin-bottom: 25px;
 }
+input{
+    border: none;
+    outline: none;
+}
+section{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(93, 0, 255));
+}
+.check{
+    display: flex;
+    align-items: center;
+}
+
+.btn-primary{
+    // margin-left: 40px;
+}
+.cardss{
+    height: auto;
+    width: auto;
+    border: 1px solid #000;
+    margin-left: 35px;
+    margin-top: 25px;
+    padding: 25px;
+    border-radius: 15px;
+}
+form{
+    height: auto;
+    width: auto;
+    border: 1px solid #000;
+    padding: 35px;
+    border-radius: 15px;
+}
+.cards{
+    height: 75px;
+    width: 100%;
+    border: 1px solid transparent;
+    margin-top: 15px;
+}

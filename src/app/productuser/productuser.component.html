@@ -1,67 +1,78 @@
-<!-- <p>productuser works!</p> -->
-
-<form action="" [formGroup]="productUser">
-    <label for="">Name :</label>
-    <input type="text" formControlName="name">
-    <br>
-
-    <label for="">price :</label>
-    <input type="text" formControlName="price">
-    <br>
-
-    <label for="">color :</label>
-    <input type="text" formControlName="color">
-    <br>
-
-    <div formGroupName="features">
-        <label for="">ram :</label>
-        <input type="text" formControlName="ram">
-        <br>
-
-        <label for="">battery :</label>
-        <input type="text" formControlName="battery">
-        <br>
-
-        <label for="">processor :</label>
-        <input type="text" formControlName="processor">
-        <br>
-    </div>
-
-     <button (click)="add()">+</button>
-    <div formArrayName="cards">
-        <div *ngFor="let card of cardArray.controls; let i= index">
-            <div formGroupName="{{i}}">
-                <label for="">name :</label>
+<section>
+    <form action="" [formGroup]="productUser">
+        <div class="check">
+            <div>
+                <label for="">Name :</label>
                 <input type="text" formControlName="name">
                 <br>
 
-                <label for="">time :</label>
-                <input type="datetime" formControlName="time">
+                <label for="">price :</label>
+                <input type="number" formControlName="price">
                 <br>
 
-                <label for="">message :</label>
-                <input type="text" formControlName="message">
+                <label for="">color :</label>
+                <input type="text"  formControlName="color">
                 <br>
-                <button (click)="delete(i)">delete</button>
+
+                <div formGroupName="features">
+                    <label for="">ram :</label>
+                    <input type="text" formControlName="ram">
+                    <br>
+
+                    <label for="">battery :</label>
+                    <input type="text" formControlName="battery">
+                    <br>
+
+                    <label for="">processor :</label>
+                    <input type="text" formControlName="processor">
+                    <br>
+                </div>
+            </div>
+            <div>
+               
+                <div formArrayName="cards">
+                    <div *ngFor="let card of cardArray.controls; let i= index">
+                        <div formGroupName="{{i}}" class="cardss">
+                            <label for="">name :</label>
+                            <input type="text" formControlName="name">
+                            <br>
+
+                            <label for="">time :</label>
+                            <input type="datetime-local"  formControlName="time">
+                            <br>
+
+                            <label for="">message :</label>
+                            <textarea  cols="25" rows="5" ormControlName="message"></textarea>
+                            <!-- <input type="" formControlName="message"> -->
+                            <br>
+                            <button (click)="delete(i)" class="btn btn-danger">delete</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div><br>
-    <label for="">Payment-mode</label>
-    <input type="radio" name="type" formControlName="mode" value="upi" >
-    <label for="">upi</label>
-    <input type="radio" name="type" formControlName="mode" value="netbanking">
-    <label for="">netbanking</label>
+        <button (click)="add()" class="btn btn-primary">add comments</button>
+       
 
-    <div *ngIf="productUser.get('mode')?.value=='upi'">
-        <label for="">upi</label>
-        <input type="text" formControlName="upi">
+        <div class="cards">
+            <label for="">Payment</label>
+            <input type="radio" name="type" formControlName="mode" value="upi">
+            <label for="">upi</label>
+            <input type="radio" name="type" formControlName="mode" value="netbanking">
+            <label for="">netbanking</label>
 
-    </div>
-    <div *ngIf="productUser.get('mode')?.value=='netbanking'">
-        <label for="">netbanking</label>
-        <input type="text" formControlName="netbanking">
+            <div *ngIf="productUser.get('mode')?.value=='upi'">
+                <label for="">upi</label>
+                <input type="text" formControlName="upi">
 
-    </div>
-   <br>
-    <button class="btn btn-info" (click)="submit()">submit</button>
-</form>
+            </div>
+            <div *ngIf="productUser.get('mode')?.value=='netbanking'">
+                <label for="">netbanking</label>
+                <input type="text" formControlName="netbanking">
+
+            </div>
+        </div>
+        <br>
+        <button class="btn btn-info" (click)="submit()">submit</button>
+    </form>
+</section>
