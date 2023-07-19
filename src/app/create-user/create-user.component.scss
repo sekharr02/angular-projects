@@ -1,0 +1,20 @@
+label{
+    width: 120px;
+    margin-bottom: 25px;
+}
+section{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+
+}
+form{
+    width: 400px;
+    height: 400px;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 35px;
+    box-shadow:45px 45px 10px #000;
+}

@@ -1,1 +1,23 @@
-<p>create-user works!</p>
+<!-- <p>create-user works!</p> -->
+
+<section>
+<form action="" [formGroup]="formUser">
+<label for="">Name :</label>
+<input type="text" formControlName="name">
+<br>
+
+<label for="">Age :</label>
+<input type="text" formControlName="age">
+<br>
+
+<label for="">phone :</label>
+<input type="text" formControlName="phone" >
+<br>
+
+<label for="">email :</label>
+<input type="text" formControlName="email">
+<br>
+
+<button (click)="submit()" class="btn btn-danger">submit</button>
+</form>
+</section>
