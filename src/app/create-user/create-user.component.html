@@ -1,4 +1,3 @@
-<!-- <p>create-user works!</p> -->
 
 <section>
 <form action="" [formGroup]="formUser">
@@ -17,6 +16,20 @@
 <label for="">email :</label>
 <input type="text" formControlName="email">
 <br>
+<main formGroupName="address">
+    <label for="">House No :</label>
+<input type="text" formControlName="hno">
+<br>
+
+<label for="">state :</label>
+<input type="text" formControlName="state">
+<br>
+
+<label for="">pin :</label>
+<input type="text" formControlName="pin" >
+<br>
+
+</main>
 
 <button (click)="submit()" class="btn btn-danger">submit</button>
 </form>
