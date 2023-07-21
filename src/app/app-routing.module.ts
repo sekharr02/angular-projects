@@ -30,6 +30,7 @@ import { BankUserComponent } from './bank-user/bank-user.component';
 import { authenticationGuard } from './authentication.guard';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { ProductuserComponent } from './productuser/productuser.component';
+import { notifyGuard } from './notify.guard';
 
 const routes: Routes = [
   {path : 'login', component:LoginComponent},
@@ -55,10 +56,10 @@ const routes: Routes = [
     {path:'gallery',component:GalleryComponent},
     {path:'user',component:UserComponent},
     {path:'student',component:StudentComponent},
-    {path:'createvehicle',component:CreateVehicleComponent},
+    {path:'createvehicle',component:CreateVehicleComponent,canDeactivate:[notifyGuard]},
     {path: 'bankuser', component:BankUserComponent},
-    {path:'createuser', component:CreateUserComponent},
-    {path:'productuser',component:ProductuserComponent}
+    {path:'createuser', component:CreateUserComponent,canDeactivate:[notifyGuard]},
+    {path:'productuser',component:ProductuserComponent,canDeactivate:[notifyGuard]}
   ]},
   {path : '', component:LoginComponent},
   {path : "**", component:PagenotfoundComponent},
