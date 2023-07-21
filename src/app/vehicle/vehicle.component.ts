@@ -75,7 +75,6 @@ export class VehicleComponent {
         alert("internal sevrve error")
       }
     )
-
   }
 
 }

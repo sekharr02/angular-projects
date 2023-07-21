@@ -2,35 +2,76 @@
     <form action="" [formGroup]="formUser">
         <label for="">Name :</label>
         <input type="text" formControlName="name">
+        <!-- <h5>touched: {{formUser.get('name')?.touched}}</h5>
+        <h5>untouched: {{formUser.get('name')?.untouched}}</h5>
+        <h5>dirty: {{formUser.get('name')?.dirty}}</h5>
+        <h5>pristine: {{formUser.get('name')?.pristine}}</h5>
+        <h5>valid: {{formUser.get('name')?.valid}}</h5>
+        <h5>invalid: {{formUser.get('name')?.invalid}}</h5> -->
+        <div class="text text-danger" *ngIf="formUser.get('name')?.invalid&& formUser.get('name')?.touched">
+            <p *ngIf="formUser.get('name')?.errors?.['required']">this field is required</p>
+            <p *ngIf="formUser.get('name')?.errors?.['minlength']">minmum 3 chars required</p>
+            <p *ngIf="formUser.get('name')?.errors?.['maxlength']">maximum 10 chars alowed</p>
+        </div>
         <br>
 
         <label for="">Age :</label>
-        <input type="text" formControlName="age">
+        <input type="number" formControlName="age">
+        <div class="text text-danger" *ngIf="formUser.get('age')?.invalid&& formUser.get('age')?.touched">
+            <p *ngIf="formUser.get('age')?.errors?.['required']">this field is required</p>
+            <p *ngIf="formUser.get('age')?.errors?.['min']">minimum 0 years</p>
+            <p *ngIf="formUser.get('age')?.errors?.['max']">maximum 25 alowed</p>
+        </div>
         <br>
+        
 
         <label for="">phone :</label>
-        <input type="text" formControlName="phone">
+        <input type="number" formControlName="phone">
+        <div class="text text-danger" *ngIf="formUser.get('phone')?.invalid&& formUser.get('phone')?.touched">
+            <p *ngIf="formUser.get('phone')?.errors?.['required']">this field is required</p>
+            <p *ngIf="formUser.get('phone')?.errors?.['min']">minmum 3 numbersr required</p>
+            <p *ngIf="formUser.get('phone')?.errors?.['max']">maximum 10 numbers alowed</p>
+        </div>
         <br>
+        
 
         <label for="">email :</label>
-        <input type="text" formControlName="email">
+        <input type="email" formControlName="email">
+        <div class="text text-danger" *ngIf="formUser.get('email')?.invalid&& formUser.get('email')?.touched">
+            <p *ngIf="formUser.get('email')?.errors?.['required']">email is required</p>
+            <!-- <p *ngIf="formUser.get('email')?.errors?.['minlength']">minmum 3 chars required</p>
+            <p *ngIf="formUser.get('email')?.errors?.['maxlength']">maximum 10 chars alowed</p> -->
+            <p *ngIf="formUser.get('email')?.errors?.['email']">invalid email</p>
+        </div>
         <br>
         <main formGroupName="address">
             <label for="">House No :</label>
             <input type="text" formControlName="hno">
+            <div class="text text-danger" *ngIf="formUser.get('address')?.get('hno')?.invalid&& formUser.get('address')?.get('hno')?.touched">
+                <p *ngIf="formUser.get('address')?.get('hno')?.errors?.['required']">this field is required</p>
+                <p *ngIf="formUser.get('address')?.get('hno')?.errors?.['minlength']">minmum 3 chars required</p>
+                <p *ngIf="formUser.get('address')?.get('hno')?.errors?.['maxlength']">maximum 10 chars alowed</p>
+            </div>
             <br>
 
             <label for="">state :</label>
             <input type="text" formControlName="state">
+            <div class="text text-danger" *ngIf="formUser.get('address')?.get('state')?.invalid&& formUser.get('address')?.get('state')?.touched">
+                <p *ngIf="formUser.get('address')?.get('state')?.errors?.['required']">this field is required</p>
+                <p *ngIf="formUser.get('address')?.get('state')?.errors?.['minlength']">minmum 3 chars required</p>
+                <p *ngIf="formUser.get('address')?.get('state')?.errors?.['maxlength']">maximum 10 chars alowed</p>
+            </div>
             <br>
 
             <label for="">pin :</label>
             <input type="text" formControlName="pin">
+            <div class="text text-danger" *ngIf="formUser.get('address')?.get('pin')?.invalid&& formUser.get('address')?.get('pin')?.touched">
+                <p *ngIf="formUser.get('address')?.get('pin')?.errors?.['required']">this field is required</p>
+                <p *ngIf="formUser.get('address')?.get('pin')?.errors?.['min']">minmum 6 numbers required</p>
+                <p *ngIf="formUser.get('address')?.get('pin')?.errors?.['max']">maximum 6 numbers alowed</p>
+            </div>
             <br>
-
         </main>
-
-
         <label for="">type :</label>
         <input type="radio" name="type" formControlName="type" value="day scholar">
         <label for="">day scholar</label>
@@ -49,21 +90,29 @@
         </div>
         <button (click)="add()" class="btn btn-dark">+</button>
 
-
         <div formArrayName="cards">
             <div *ngFor="let card of formarray.controls; let i=index">
                 <div formGroupName="{{i}}" class="cards">
                 <h3>card {{i+1}}</h3>
                 <label for="">Number :</label>
                 <input type="number" formControlName="number">
+                <div *ngIf="formarray.controls[i].get('number')?.invalid && formarray.controls[i].get('number')?.touched">
+                    <p *ngIf="formarray.controls[i].get('number')?.errors?.['required']" class="text text-danger">number required</p>
+                </div>
                 <br>
 
                 <label for="">expiry Date :</label>
                 <input type="month" formControlName="expirydate">
+                <div *ngIf="formarray.controls[i].get('expirydate')?.invalid && formarray.controls[i].get('expirydate')?.touched">
+                    <p *ngIf="formarray.controls[i].get('expirydate')?.errors?.['required']" class="text text-danger">expirydate     required</p>
+                </div>
                 <br>
 
                 <label for="">CVV :</label>
                 <input type="number" formControlName="cvv">
+                <div *ngIf="formarray.controls[i].get('cvv')?.invalid && formarray.controls[i].get('cvv')?.touched">
+                    <p *ngIf="formarray.controls[i].get('cvv')?.errors?.['required']" class="text text-danger">expirydate     required</p>
+                </div>
                 <br>
 
                 <button class="btn btn-danger" (click)="delete(i)">delete</button>
