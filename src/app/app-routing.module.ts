@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -31,6 +31,7 @@ import { authenticationGuard } from './authentication.guard';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { ProductuserComponent } from './productuser/productuser.component';
 import { notifyGuard } from './notify.guard';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 
 const routes: Routes = [
   {path : 'login', component:LoginComponent},
@@ -57,9 +58,11 @@ const routes: Routes = [
     {path:'user',component:UserComponent},
     {path:'student',component:StudentComponent},
     {path:'createvehicle',component:CreateVehicleComponent,canDeactivate:[notifyGuard]},
+    {path:'edit/:id',component:CreateVehicleComponent},
     {path: 'bankuser', component:BankUserComponent},
     {path:'createuser', component:CreateUserComponent,canDeactivate:[notifyGuard]},
-    {path:'productuser',component:ProductuserComponent,canDeactivate:[notifyGuard]}
+    {path:'productuser',component:ProductuserComponent,canDeactivate:[notifyGuard]},
+    {path:'vehicle-details/:id', component:VehicleDetailsComponent}
   ]},
   {path : '', component:LoginComponent},
   {path : "**", component:PagenotfoundComponent},

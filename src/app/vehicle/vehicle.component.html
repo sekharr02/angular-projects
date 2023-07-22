@@ -65,6 +65,8 @@
             <h5>{{'Color : ' +vehicle.color}}</h5>
             <h5>{{'Vehicle Id : ' +vehicle.id}}</h5>
             <!-- <h5>{{vehicle.id}}</h5> -->
+            <button class="btn btn-info" (click)="edit(vehicle.id)">edit</button>&nbsp;
+            <button class="btn btn-warning" (click)="view(vehicle.id)">view</button>&nbsp;
             <button (click)="delete(vehicle.id)" class="btn btn-danger">delete</button>
         </div>
     </div>

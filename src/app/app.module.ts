@@ -33,6 +33,7 @@ import { CreateVehicleComponent } from './create-vehicle/create-vehicle.componen
 import { BankUserComponent } from './bank-user/bank-user.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { ProductuserComponent } from './productuser/productuser.component';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import { ProductuserComponent } from './productuser/productuser.component';
     CreateVehicleComponent,
     BankUserComponent,
     CreateUserComponent,
-    ProductuserComponent
+    ProductuserComponent,
+    VehicleDetailsComponent
   ],
   imports: [
     BrowserModule,
