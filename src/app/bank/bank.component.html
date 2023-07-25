@@ -42,7 +42,7 @@
     <tbody>
         <tr *ngFor="let bank of banks">
             <td>{{bank.account_name}}</td>
-            <td>{{bank.available_balance}}</td>
+            <td>{{bank.available_balance | price}}</td>
             <td>{{bank.account_number}}</td>
             <td>{{bank.city}}</td>
             <td><img src="{{bank.profie_picture}}" alt="" height="100px" width="100px"></td>
