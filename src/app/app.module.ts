@@ -35,6 +35,7 @@ import { CreateUserComponent } from './create-user/create-user.component';
 import { ProductuserComponent } from './productuser/productuser.component';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { PricePipe } from './price.pipe';
+import { AgePipe } from './age.pipe';
 
 @NgModule({
   declarations: [
@@ -68,7 +69,8 @@ import { PricePipe } from './price.pipe';
     CreateUserComponent,
     ProductuserComponent,
     VehicleDetailsComponent,
-    PricePipe
+    PricePipe,
+    AgePipe
   ],
   imports: [
     BrowserModule,
