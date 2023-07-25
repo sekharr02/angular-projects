@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { UserService } from '../user.service';
+import { Product } from '../product';
 
 @Component({
   selector: 'app-user',
@@ -9,7 +10,7 @@ import { UserService } from '../user.service';
 export class UserComponent {
 
   public users:any=[];
-  public mobiles:any=[];
+  public mobiles:Product[]=[];
 
   constructor(private userservice:UserService){
      userservice.getuser().subscribe(
@@ -21,10 +22,10 @@ export class UserComponent {
       }
      )
      userservice.getusers().subscribe(
-      (data:any)=>{
+      (data:Product[])=>{
         this.mobiles=data
       },
-      (err:any)=>{
+      (err:Product[])=>{
        alert("not working")
       }
      )
