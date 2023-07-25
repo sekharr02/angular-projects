@@ -9,6 +9,7 @@ import { UserService } from '../user.service';
 export class UserComponent {
 
   public users:any=[];
+  public mobiles:any=[];
 
   constructor(private userservice:UserService){
      userservice.getuser().subscribe(
@@ -19,7 +20,17 @@ export class UserComponent {
         alert("server unavailable")
       }
      )
-
+     userservice.getusers().subscribe(
+      (data:any)=>{
+        this.mobiles=data
+      },
+      (err:any)=>{
+       alert("not working")
+      }
+     )
   }
+    
+    
 
 }
+  

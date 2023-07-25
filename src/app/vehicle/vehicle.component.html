@@ -58,7 +58,7 @@
     <div class="row container9"  *ngFor="let vehicle of vehicles">
         <div class="col-lg-3 col-md-4 col-sm-6 col-12 cards">
             <img src="{{vehicle.image}}" alt="" height="150px" width="100%">
-            <h5>{{'Vehicle : ' +vehicle.Vehicle}}</h5>
+            <h5 appImp>{{'Vehicle : ' +vehicle.Vehicle}}</h5>
             <h5>{{'Manufacturer : ' +vehicle.manufacturer}}</h5>
             <h5>{{'Type : ' +vehicle.type}}</h5>
             <h5>{{'Fuel : ' +vehicle.fuel}}</h5>
