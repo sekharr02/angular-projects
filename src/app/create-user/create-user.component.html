@@ -39,9 +39,8 @@
         <input type="email" formControlName="email">
         <div class="text text-danger" *ngIf="formUser.get('email')?.invalid&& formUser.get('email')?.touched">
             <p *ngIf="formUser.get('email')?.errors?.['required']">email is required</p>
-            <!-- <p *ngIf="formUser.get('email')?.errors?.['minlength']">minmum 3 chars required</p>
-            <p *ngIf="formUser.get('email')?.errors?.['maxlength']">maximum 10 chars alowed</p> -->
             <p *ngIf="formUser.get('email')?.errors?.['email']">invalid email</p>
+            <p *ngIf="formUser.get('email')?.errors?.['domainValidator']">only capgimini mail accepted</p>
         </div>
         <br>
         <main formGroupName="address">
@@ -59,7 +58,8 @@
             <div class="text text-danger" *ngIf="formUser.get('address')?.get('state')?.invalid&& formUser.get('address')?.get('state')?.touched">
                 <p *ngIf="formUser.get('address')?.get('state')?.errors?.['required']">this field is required</p>
                 <p *ngIf="formUser.get('address')?.get('state')?.errors?.['minlength']">minmum 3 chars required</p>
-                <p *ngIf="formUser.get('address')?.get('state')?.errors?.['maxlength']">maximum 10 chars alowed</p>
+                <!-- <p *ngIf="formUser.get('address')?.get('state')?.errors?.['maxlength']">maximum 10 chars alowed</p> -->
+                <p *ngIf="formUser.get('address')?.get('state')?.errors?.['stateValidator']">only ts and ap accepted</p>
             </div>
             <br>
 
