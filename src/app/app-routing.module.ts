@@ -32,6 +32,8 @@ import { CreateUserComponent } from './create-user/create-user.component';
 import { ProductuserComponent } from './productuser/productuser.component';
 import { notifyGuard } from './notify.guard';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 const routes: Routes = [
   {path : 'login', component:LoginComponent},
@@ -62,7 +64,9 @@ const routes: Routes = [
     {path: 'bankuser', component:BankUserComponent},
     {path:'createuser', component:CreateUserComponent,canDeactivate:[notifyGuard]},
     {path:'productuser',component:ProductuserComponent,canDeactivate:[notifyGuard]},
-    {path:'vehicle-details/:id', component:VehicleDetailsComponent}
+    {path:'vehicle-details/:id', component:VehicleDetailsComponent},
+    {path:'parent',component:ParentComponent},
+    {path:'child',component:ChildComponent}
   ]},
   {path : '', component:LoginComponent},
   {path : "**", component:PagenotfoundComponent},
