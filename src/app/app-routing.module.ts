@@ -37,6 +37,8 @@ import { ChildComponent } from './child/child.component';
 import { ItemComponent } from './item/item.component';
 import { NavComponent } from './nav/nav.component';
 import { CartComponent } from './cart/cart.component';
+import { TaskComponent } from './task/task.component';
+import { TaskoneComponent } from './taskone/taskone.component';
 
 const routes: Routes = [
   {path : 'login', component:LoginComponent},
@@ -72,7 +74,9 @@ const routes: Routes = [
     {path:'child',component:ChildComponent},
     {path:'item',component:ItemComponent},
     {path:'nav',component:NavComponent},
-    {path:'cart',component:CartComponent}
+    {path:'cart',component:CartComponent},
+    {path:'task',component:TaskComponent},
+    {path:'task1',component:TaskoneComponent}
   ]},
   {path : '', component:LoginComponent},
   {path : "**", component:PagenotfoundComponent},

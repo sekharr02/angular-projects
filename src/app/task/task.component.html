@@ -1,0 +1,12 @@
+<div>
+<input type="number" placeholder="number1" [(ngModel)]="num1">
+<br>
+<input type="number" placeholder="number2"  [(ngModel)]="num2">
+<br>
+<button class="btn btn-warning">result : {{result}}</button>
+<br>
+
+
+
+<app-taskone [num1]="num1" [num2]="num2" (info)="catch($event)"></app-taskone>
+</div>

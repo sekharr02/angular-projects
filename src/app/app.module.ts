@@ -42,6 +42,8 @@ import { ChildComponent } from './child/child.component';
 import { ItemComponent } from './item/item.component';
 import { NavComponent } from './nav/nav.component';
 import { CartComponent } from './cart/cart.component';
+import { TaskComponent } from './task/task.component';
+import { TaskoneComponent } from './taskone/taskone.component';
 
 @NgModule({
   declarations: [
@@ -82,7 +84,9 @@ import { CartComponent } from './cart/cart.component';
     ChildComponent,
     ItemComponent,
     NavComponent,
-    CartComponent
+    CartComponent,
+    TaskComponent,
+    TaskoneComponent
   ],
   imports: [
     BrowserModule,
