@@ -44,6 +44,7 @@ import { NavComponent } from './nav/nav.component';
 import { CartComponent } from './cart/cart.component';
 import { TaskComponent } from './task/task.component';
 import { TaskoneComponent } from './taskone/taskone.component';
+import { AboutModule } from './about/about.module';
 
 @NgModule({
   declarations: [
@@ -93,7 +94,8 @@ import { TaskoneComponent } from './taskone/taskone.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AboutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

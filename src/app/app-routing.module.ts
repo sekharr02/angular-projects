@@ -39,6 +39,8 @@ import { NavComponent } from './nav/nav.component';
 import { CartComponent } from './cart/cart.component';
 import { TaskComponent } from './task/task.component';
 import { TaskoneComponent } from './taskone/taskone.component';
+import { AboutCeoComponent } from './about/about-ceo/about-ceo.component';
+import { AboutCompanyComponent } from './about/about-company/about-company.component';
 
 const routes: Routes = [
   {path : 'login', component:LoginComponent},
@@ -76,7 +78,9 @@ const routes: Routes = [
     {path:'nav',component:NavComponent},
     {path:'cart',component:CartComponent},
     {path:'task',component:TaskComponent},
-    {path:'task1',component:TaskoneComponent}
+    {path:'task1',component:TaskoneComponent},
+    {path:'ceo',component:AboutCeoComponent},
+    {path:'company',component:AboutCompanyComponent}
   ]},
   {path : '', component:LoginComponent},
   {path : "**", component:PagenotfoundComponent},
