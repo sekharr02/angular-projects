@@ -80,7 +80,11 @@ const routes: Routes = [
     {path:'task',component:TaskComponent},
     {path:'task1',component:TaskoneComponent},
     {path:'ceo',component:AboutCeoComponent},
-    {path:'company',component:AboutCompanyComponent}
+    {path:'company',component:AboutCompanyComponent},
+     {
+      path: 'contact',
+      loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule)
+    }
   ]},
   {path : '', component:LoginComponent},
   {path : "**", component:PagenotfoundComponent},
